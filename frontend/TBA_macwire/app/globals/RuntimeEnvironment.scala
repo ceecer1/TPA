@@ -35,7 +35,3 @@ trait PlayModule {
   lazy val configuration = application.configuration
 }
 
-object RuntimeEnvironment
-  extends TBAApplication
-  with WSClientModule
-  with PlayModule

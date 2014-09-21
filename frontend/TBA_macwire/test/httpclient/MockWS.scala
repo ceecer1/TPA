@@ -85,8 +85,8 @@ case class MockWS(withRoutes: MockWS.Routes) extends WSClient with Mockito {
     given (ws.withVirtualHost(any)) willReturn ws
 
     given (ws.get()) will answer(GET)
-    given (ws.post(any[AnyRef])(any, any)) will answer(POST)
-    given (ws.put(any[AnyRef])(any, any)) will answer(PUT)
+    given (ws.post(any[AnyRef])(any)) will answer(POST)
+    given (ws.put(any[AnyRef])(any)) will answer(PUT)
     given (ws.delete()) will answer(DELETE)
 
     ws
